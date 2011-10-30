@@ -22,5 +22,5 @@ provides "packages"
 require_plugin 'ruby'
 
 if File.exists?("/etc/debian_version")
-  package from("dpkg --get-selections | awk '{print $1}' | tr '\n$' '\ ' ")
+  packages from("dpkg --get-selections | awk '{print $1}' | tr '\n$' '\ ' ")
 end
